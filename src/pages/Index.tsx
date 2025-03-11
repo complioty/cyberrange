@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import Typewriter from 'typewriter-effect';
 import { Card } from "@/components/ui/card";
@@ -26,7 +25,9 @@ const Index = () => {
   }, []);
 
   const isDomainOne = hostname.includes('cyberrange.one');
-  const displayDomain = isDomainOne ? 'cyberrange.one' : 'cyberrange.company';
+  const isDomainTraining = hostname.includes('cyberrange.training');
+  const displayDomain = isDomainOne ? 'cyberrange.one' : 
+                        isDomainTraining ? 'cyberrange.training' : 'cyberrange.company';
   
   const handleContactClick = (type: string) => {
     let subject = "Inquiry about ";
@@ -85,7 +86,11 @@ const Index = () => {
             <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-black tracking-tight leading-tight">
               <Typewriter
                 options={{
-                  strings: [`$ ${displayDomain}`],
+                  strings: [
+                    '$ cyberrange.one', 
+                    '$ cyberrange.company', 
+                    '$ cyberrange.training'
+                  ],
                   autoStart: true,
                   loop: true,
                   delay: 80,
