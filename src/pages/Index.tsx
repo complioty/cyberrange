@@ -166,7 +166,7 @@ const Index = () => {
               </div>
               <div className="p-5 md:p-8 pt-0 mt-auto">
                 <p className="text-black/70 text-xs md:text-sm mb-1">$ cat price.txt</p>
-                <div className="text-2xl md:text-3xl font-bold text-black mb-4 md:mb-6">30.000€</div>
+                <div className="text-2xl md:text-3xl font-bold text-black mb-4 md:mb-6">$30,000</div>
                 <Button 
                   onClick={() => handleContactClick('single')}
                   className="w-full bg-black hover:bg-black/80 text-white border border-black py-3 md:py-6 font-mono rounded-none text-sm md:text-base">
@@ -203,7 +203,7 @@ const Index = () => {
               </div>
               <div className="p-5 md:p-8 pt-0 mt-auto">
                 <p className="text-black/70 text-xs md:text-sm mb-1">$ sudo cat price.txt</p>
-                <div className="text-2xl md:text-3xl font-bold text-black mb-4 md:mb-6">50.000€</div>
+                <div className="text-2xl md:text-3xl font-bold text-black mb-4 md:mb-6">$50,000</div>
                 <Button 
                   onClick={() => handleContactClick('bundle')}
                   className="w-full bg-black hover:bg-black/80 text-white border border-black py-3 md:py-6 font-mono rounded-none text-sm md:text-base">
