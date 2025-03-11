@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import Typewriter from 'typewriter-effect';
 import { Card } from "@/components/ui/card";
@@ -65,6 +64,17 @@ const Index = () => {
     }
   ];
 
+  // Determine which domain should be first in the Typewriter based on current hostname
+  const getTypewriterStrings = () => {
+    if (isDomainOne) {
+      return ['$ cyberrange.one', '$ cyberrange.company', '$ cyberrange.training'];
+    } else if (isDomainTraining) {
+      return ['$ cyberrange.training', '$ cyberrange.one', '$ cyberrange.company'];
+    } else {
+      return ['$ cyberrange.company', '$ cyberrange.training', '$ cyberrange.one'];
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white text-black font-mono">
       <div className="container mx-auto px-4 py-8 md:py-16 space-y-12 md:space-y-24">
@@ -87,11 +97,7 @@ const Index = () => {
             <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-black tracking-tight leading-tight">
               <Typewriter
                 options={{
-                  strings: [
-                    '$ cyberrange.one', 
-                    '$ cyberrange.company', 
-                    '$ cyberrange.training'
-                  ],
+                  strings: getTypewriterStrings(),
                   autoStart: true,
                   loop: true,
                   delay: 80,
