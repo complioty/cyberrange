@@ -82,23 +82,14 @@ const Index = () => {
               <span className="text-black font-medium text-xs md:text-sm">// Premium Domain For Sale</span>
             </div>
             
-            <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-[#00FF41] tracking-tight leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-black tracking-tight leading-tight">
               <Typewriter
                 options={{
-                  strings: [
-                    `echo "${displayDomain}"`,
-                    `whois "${displayDomain}"`,
-                    `dig "${displayDomain}"`,
-                    `host "${displayDomain}"`
-                  ],
+                  strings: [`$ ${displayDomain}`],
                   autoStart: true,
                   loop: true,
-                  delay: 120,
-                  deleteSpeed: 50,
-                  pauseFor: 2000,
-                  cursor: '█',
-                  wrapperClassName: 'whitespace-pre',
-                  cursorClassName: 'text-[#00FF41] animate-pulse'
+                  delay: 80,
+                  deleteSpeed: 80
                 }}
               />
             </h1>
