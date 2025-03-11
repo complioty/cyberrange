@@ -94,3 +94,17 @@
 .card:hover {
   transform: translateY(-5px);
 }
+
+/* Mobile optimization */
+@media (max-width: 640px) {
+  h1.break-words {
+    word-break: break-word;
+    hyphens: auto;
+    font-size: 2rem;
+  }
+  
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

@@ -84,14 +84,13 @@ const Index = () => {
               <span className="text-black font-medium text-xs md:text-sm">// Domain for sale</span>
             </div>
             
-            <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-black tracking-tight leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-black tracking-tight leading-tight break-words">
               <Typewriter
                 options={{
                   strings: [`$ ${displayDomain}`],
                   autoStart: true,
-                  loop: true,
-                  delay: 80,
-                  deleteSpeed: 80
+                  loop: false,
+                  delay: 80
                 }}
               />
             </h1>
