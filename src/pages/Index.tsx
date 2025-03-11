@@ -220,8 +220,12 @@ const Index = () => {
           <Link to="/impressum" className="text-black hover:text-black/80 inline-block text-xs underline">
             ./impressum.sh
           </Link>
-          <p className="text-xs mt-2">© {new Date().getFullYear()} All rights reserved</p>
-        </div>
+{/* Terminal Footer */}
+        <div className="text-center text-black/60 mt-8">
+          <p className="text-xs">
+            <span className="text-black/70">root@cyberrange:~#</span> echo "© {new Date().getFullYear()} All rights reserved"
+          </p>
+        </div>        </div>
       </div>
     </div>
   );
