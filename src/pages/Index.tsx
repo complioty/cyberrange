@@ -81,7 +81,7 @@ const Index = () => {
           
           <div className="p-4 md:p-6 text-center space-y-6 md:space-y-8">
             <div className="inline-flex items-center space-x-2 bg-black/5 px-3 py-1 md:px-4 md:py-2 rounded-full border border-black/30">
-              <span className="text-black font-medium text-xs md:text-sm">// Premium Domain For Sale</span>
+              <span className="text-black font-medium text-xs md:text-sm">// Domain for sale</span>
             </div>
             
             <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-black tracking-tight leading-tight">
