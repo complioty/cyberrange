@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import Typewriter from 'typewriter-effect';
 import { Card } from "@/components/ui/card";
@@ -138,20 +139,21 @@ const Index = () => {
         <div id="pricing" className="pt-12 scroll-mt-24 max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold mb-10 text-center text-black border-b-2 border-black pb-2">[root@cyberrange]# cat /etc/pricing.conf</h2>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Single Domain Card */}
-            <Card className="p-8 bg-white border-2 border-black hover:shadow-[5px_5px_0px_0px_rgba(0,0,0)] transition-all duration-300">
-              <div className="space-y-6">
+            <Card className="bg-white border-2 border-black hover:shadow-[5px_5px_0px_0px_rgba(0,0,0)] transition-all duration-300 flex flex-col">
+              <div className="p-8 flex-grow">
                 <div className="p-3 rounded-none bg-black/5 w-fit border-2 border-black">
                   <Database className="w-6 h-6 text-black" />
                 </div>
-                <h3 className="text-xl font-bold text-black">Single Domain</h3>
+                <h3 className="text-xl font-bold text-black mt-6">Single Domain</h3>
                 <div className="h-px bg-black/20 my-4"></div>
                 <ul className="space-y-3">
                   {[
                     "Full ownership rights",
                     "Immediate transfer process", 
-                    "Premium cybersecurity branding"
+                    "Premium cybersecurity branding",
+                    "Choose one: cyberrange.one, cyberrange.company, or cyberrange.training"
                   ].map((item, idx) => (
                     <li key={idx} className="flex items-start">
                       <ArrowRight className="w-5 h-5 text-black mr-2 mt-0.5 flex-shrink-0" />
@@ -159,36 +161,36 @@ const Index = () => {
                     </li>
                   ))}
                 </ul>
-                <div className="pt-6">
-                  <p className="text-black/70 text-sm mb-1">$ cat price.txt</p>
-                  <div className="text-3xl font-bold text-black mb-6">€20,000</div>
-                  <Button 
-                    onClick={() => handleContactClick('single')}
-                    className="w-full bg-black hover:bg-black/80 text-white border border-black py-6 font-mono rounded-none">
-                    <Mail className="w-4 h-4 mr-2" />
-                    ./purchase_single.sh
-                  </Button>
-                </div>
+              </div>
+              <div className="p-8 pt-0 mt-auto">
+                <p className="text-black/70 text-sm mb-1">$ cat price.txt</p>
+                <div className="text-3xl font-bold text-black mb-6">€30,000</div>
+                <Button 
+                  onClick={() => handleContactClick('single')}
+                  className="w-full bg-black hover:bg-black/80 text-white border border-black py-6 font-mono rounded-none">
+                  <Mail className="w-4 h-4 mr-2" />
+                  ./purchase_single.sh
+                </Button>
               </div>
             </Card>
 
             {/* Bundle Card */}
-            <Card className="p-8 bg-white border-2 border-black hover:shadow-[5px_5px_0px_0px_rgba(0,0,0)] transition-all duration-300 relative">
+            <Card className="bg-white border-2 border-black hover:shadow-[5px_5px_0px_0px_rgba(0,0,0)] transition-all duration-300 relative flex flex-col">
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-black text-white px-4 py-1 text-sm font-medium border border-black">
                 ROOT ACCESS
               </div>
-              <div className="space-y-6">
+              <div className="p-8 flex-grow">
                 <div className="p-3 rounded-none bg-black/5 w-fit border-2 border-black">
                   <Network className="w-6 h-6 text-black" />
                 </div>
-                <h3 className="text-xl font-bold text-black">Domain Bundle</h3>
+                <h3 className="text-xl font-bold text-black mt-6">Domain Bundle</h3>
                 <div className="h-px bg-black/20 my-4"></div>
                 <ul className="space-y-3">
                   {[
-                    "Both cyberrange.one & cyberrange.company",
+                    "All three premium domains included",
+                    "cyberrange.one + cyberrange.company + cyberrange.training",
                     "Complete market dominance",
-                    "Cross-platform branding synergy",
-                    "Enhanced SEO potential"
+                    "Ultimate cyber range branding portfolio"
                   ].map((item, idx) => (
                     <li key={idx} className="flex items-start">
                       <ArrowRight className="w-5 h-5 text-black mr-2 mt-0.5 flex-shrink-0" />
@@ -196,70 +198,23 @@ const Index = () => {
                     </li>
                   ))}
                 </ul>
-                <div className="pt-6">
-                  <p className="text-black/70 text-sm mb-1">$ sudo cat price.txt</p>
-                  <div className="text-3xl font-bold text-black mb-6">€30,000</div>
-                  <Button 
-                    onClick={() => handleContactClick('bundle')}
-                    className="w-full bg-black hover:bg-black/80 text-white border border-black py-6 font-mono rounded-none">
-                    <Mail className="w-4 h-4 mr-2" />
-                    ./purchase_bundle.sh
-                  </Button>
-                </div>
               </div>
-            </Card>
-
-            {/* Complete Package Card */}
-            <Card className="p-8 bg-white border-2 border-black hover:shadow-[5px_5px_0px_0px_rgba(0,0,0)] transition-all duration-300 relative">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-black text-white px-4 py-1 text-sm font-medium border border-black">
-                SUDO PRIVILEGES
-              </div>
-              <div className="space-y-6">
-                <div className="p-3 rounded-none bg-black/5 w-fit border-2 border-black">
-                  <Globe className="w-6 h-6 text-black" />
-                </div>
-                <h3 className="text-xl font-bold text-black">Complete Package</h3>
-                <div className="h-px bg-black/20 my-4"></div>
-                <ul className="space-y-3">
-                  {[
-                    "All three premium domains",
-                    "cyberrange.one, cyberrange.company & cyberrange.training",
-                    "Ultimate cybersecurity portfolio",
-                    "Maximum brand protection"
-                  ].map((item, idx) => (
-                    <li key={idx} className="flex items-start">
-                      <ArrowRight className="w-5 h-5 text-black mr-2 mt-0.5 flex-shrink-0" />
-                      <span className="text-black/70">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="pt-6">
-                  <p className="text-black/70 text-sm mb-1">$ sudo -s cat price.txt</p>
-                  <div className="text-3xl font-bold text-black mb-6">€40,000</div>
-                  <Button 
-                    onClick={() => handleContactClick('complete')}
-                    className="w-full bg-black hover:bg-black/80 text-white border border-black py-6 font-mono rounded-none">
-                    <Mail className="w-4 h-4 mr-2" />
-                    ./purchase_complete.sh
-                  </Button>
-                </div>
+              <div className="p-8 pt-0 mt-auto">
+                <p className="text-black/70 text-sm mb-1">$ sudo cat price.txt</p>
+                <div className="text-3xl font-bold text-black mb-6">€50,000</div>
+                <Button 
+                  onClick={() => handleContactClick('bundle')}
+                  className="w-full bg-black hover:bg-black/80 text-white border border-black py-6 font-mono rounded-none">
+                  <Mail className="w-4 h-4 mr-2" />
+                  ./purchase_bundle.sh
+                </Button>
               </div>
             </Card>
           </div>
         </div>
 
-        {/* ASCII Art Footer */}
+        {/* Footer */}
         <div className="text-center text-black/60 pt-12 border-t-2 border-black/20">
-          <pre className="text-xs md:text-sm overflow-x-auto scrollbar-none mb-6">
-{`
- ██████╗██╗   ██╗██████╗ ███████╗██████╗     ██████╗  █████╗ ███╗   ██╗ ██████╗ ███████╗
-██╔════╝╚██╗ ██╔╝██╔══██╗██╔════╝██╔══██╗    ██╔══██╗██╔══██╗████╗  ██║██╔════╝ ██╔════╝
-██║      ╚████╔╝ ██████╔╝█████╗  ██████╔╝    ██████╔╝███████║██╔██╗ ██║██║  ███╗█████╗  
-██║       ╚██╔╝  ██╔══██╗██╔══╝  ██╔══██╗    ██╔══██╗██╔══██║██║╚██╗██║██║   ██║██╔══╝  
-╚██████╗   ██║   ██████╔╝███████╗██║  ██║    ██║  ██║██║  ██║██║ ╚████║╚██████╔╝███████╗
- ╚═════╝   ╚═╝   ╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚══════╝
-`}
-          </pre>
           <p className="text-xs">© {new Date().getFullYear()} All rights reserved</p>
           <Link to="/impressum" className="text-black hover:text-black/80 mt-2 inline-block text-xs underline">
             ./impressum.sh

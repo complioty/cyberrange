@@ -8,9 +8,6 @@ import { Link } from 'react-router-dom';
 const Impressum = () => {
   return (
     <div className="min-h-screen bg-white text-black font-mono">
-      {/* Background grid effect */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#e5e5e580_1px,transparent_1px),linear-gradient(to_bottom,#e5e5e580_1px,transparent_1px)] bg-[size:14px_24px]" />
-      
       <div className="container mx-auto px-4 py-16 relative z-10">
         <Link to="/" className="inline-flex items-center text-black hover:text-black/80 mb-6 border border-black px-3 py-1 text-sm">
           <ChevronLeft className="w-4 h-4 mr-1" />
