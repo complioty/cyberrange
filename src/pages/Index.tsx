@@ -84,13 +84,9 @@ const Index = () => {
           </Card>
         </div>
 
-        {/* Contact Info */}
+        {/* Contact Info - Now simplified to just a note about contacting */}
         <div className="text-center space-y-2">
-          <p className="text-gray-600">For inquiries, please contact:</p>
-          <a href="mailto:Philip.empl@gmx.de" className="text-blue-600 font-medium hover:underline inline-flex items-center">
-            <Mail className="w-4 h-4 mr-2" />
-            Philip.empl@gmx.de
-          </a>
+          <p className="text-gray-600">For inquiries, please use the contact buttons above</p>
         </div>
 
         {/* Footer */}
