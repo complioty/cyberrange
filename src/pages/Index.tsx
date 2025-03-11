@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import Typewriter from 'typewriter-effect';
 import { Card } from "@/components/ui/card";
@@ -85,11 +84,20 @@ const Index = () => {
             <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-black tracking-tight leading-tight">
               <Typewriter
                 options={{
-                  strings: [`$ ${displayDomain}`],
+                  strings: [
+                    `echo "${displayDomain}"`,
+                    `whois "${displayDomain}"`,
+                    `dig "${displayDomain}"`,
+                    `host "${displayDomain}"`
+                  ],
                   autoStart: true,
                   loop: true,
-                  delay: 80,
-                  deleteSpeed: 80
+                  delay: 120,
+                  deleteSpeed: 50,
+                  pauseFor: 2000,
+                  cursor: '█',
+                  wrapperClassName: 'whitespace-pre',
+                  cursorClassName: 'text-black animate-pulse'
                 }}
               />
             </h1>
