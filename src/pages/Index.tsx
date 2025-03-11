@@ -65,7 +65,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white text-black font-mono">
-      <div className="container mx-auto px-4 py-16 space-y-24">
+      <div className="container mx-auto px-4 py-8 md:py-16 space-y-12 md:space-y-24">
         {/* Terminal Header */}
         <div className="max-w-4xl mx-auto bg-white border-2 border-black rounded-md shadow-[5px_5px_0px_0px_rgba(0,0,0)] overflow-hidden">
           <div className="flex items-center bg-black px-4 py-2">
@@ -77,12 +77,12 @@ const Index = () => {
             <p className="text-xs text-white">root@cyberrange:~# <span className="animate-pulse">_</span></p>
           </div>
           
-          <div className="p-6 text-center space-y-8">
-            <div className="inline-flex items-center space-x-2 bg-black/5 px-4 py-2 rounded-full border border-black/30">
-              <span className="text-black font-medium text-sm">// Premium Domain For Sale</span>
+          <div className="p-4 md:p-6 text-center space-y-6 md:space-y-8">
+            <div className="inline-flex items-center space-x-2 bg-black/5 px-3 py-1 md:px-4 md:py-2 rounded-full border border-black/30">
+              <span className="text-black font-medium text-xs md:text-sm">// Premium Domain For Sale</span>
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-bold text-black tracking-tight leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-black tracking-tight leading-tight">
               <Typewriter
                 options={{
                   strings: [`$ ${displayDomain}`],
@@ -94,23 +94,23 @@ const Index = () => {
               />
             </h1>
             
-            <p className="text-lg text-black/70 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-base md:text-lg text-black/70 max-w-2xl mx-auto leading-relaxed">
               {'>'} Launch your cybersecurity training platform, CTF competition, or ethical hacking business with this premium domain.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
               <Button 
                 onClick={() => handleContactClick('single')}
-                className="w-full sm:w-auto bg-black hover:bg-black/80 text-white border border-black px-8 py-6 text-lg rounded-none font-mono">
-                <Mail className="w-5 h-5 mr-2" />
+                className="w-full sm:w-auto bg-black hover:bg-black/80 text-white border border-black px-4 py-3 md:px-8 md:py-6 text-base md:text-lg rounded-none font-mono">
+                <Mail className="w-4 h-4 md:w-5 md:h-5 mr-2" />
                 ./contact.sh
               </Button>
               <Button 
                 variant="outline" 
                 onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
-                className="w-full sm:w-auto border-2 border-black text-black hover:bg-black/5 px-8 py-6 text-lg rounded-none font-mono">
+                className="w-full sm:w-auto border-2 border-black text-black hover:bg-black/5 px-4 py-3 md:px-8 md:py-6 text-base md:text-lg rounded-none font-mono">
                 cat pricing.txt
-                <ArrowRight className="w-4 h-4 ml-2" />
+                <ArrowRight className="w-3 h-3 md:w-4 md:h-4 ml-2" />
               </Button>
             </div>
           </div>
@@ -118,17 +118,17 @@ const Index = () => {
         
         {/* Benefits Section */}
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold mb-10 text-center text-black border-b-2 border-black pb-2">[root@cyberrange]# ls -la /benefits</h2>
+          <h2 className="text-xl md:text-2xl font-bold mb-6 md:mb-10 text-center text-black border-b-2 border-black pb-2">[root@cyberrange]# ls -la /benefits</h2>
           
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-4 md:gap-6">
             {features.map((feature, index) => (
-              <Card key={index} className="bg-white border-2 border-black hover:shadow-[5px_5px_0px_0px_rgba(0,0,0)] transition-all duration-300 p-6">
+              <Card key={index} className="bg-white border-2 border-black hover:shadow-[5px_5px_0px_0px_rgba(0,0,0)] transition-all duration-300 p-4 md:p-6">
                 <div className="flex flex-col h-full">
-                  <div className="p-3 rounded-none bg-black/5 w-fit mb-4 border-2 border-black">
+                  <div className="p-2 md:p-3 rounded-none bg-black/5 w-fit mb-3 md:mb-4 border-2 border-black">
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-bold mb-2 text-black">{feature.title}</h3>
-                  <p className="text-black/70 flex-grow">{feature.description}</p>
+                  <h3 className="text-lg md:text-xl font-bold mb-2 text-black">{feature.title}</h3>
+                  <p className="text-sm md:text-base text-black/70 flex-grow">{feature.description}</p>
                 </div>
               </Card>
             ))}
@@ -136,19 +136,19 @@ const Index = () => {
         </div>
 
         {/* Pricing Section */}
-        <div id="pricing" className="pt-12 scroll-mt-24 max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold mb-10 text-center text-black border-b-2 border-black pb-2">[root@cyberrange]# cat /etc/pricing.conf</h2>
+        <div id="pricing" className="pt-8 md:pt-12 scroll-mt-16 md:scroll-mt-24 max-w-4xl mx-auto">
+          <h2 className="text-xl md:text-2xl font-bold mb-6 md:mb-10 text-center text-black border-b-2 border-black pb-2">[root@cyberrange]# cat /etc/pricing.conf</h2>
           
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
             {/* Single Domain Card */}
             <Card className="bg-white border-2 border-black hover:shadow-[5px_5px_0px_0px_rgba(0,0,0)] transition-all duration-300 flex flex-col">
-              <div className="p-8 flex-grow">
-                <div className="p-3 rounded-none bg-black/5 w-fit border-2 border-black">
-                  <Database className="w-6 h-6 text-black" />
+              <div className="p-5 md:p-8 flex-grow">
+                <div className="p-2 md:p-3 rounded-none bg-black/5 w-fit border-2 border-black">
+                  <Database className="w-5 h-5 md:w-6 md:h-6 text-black" />
                 </div>
-                <h3 className="text-xl font-bold text-black mt-6">Single Domain</h3>
-                <div className="h-px bg-black/20 my-4"></div>
-                <ul className="space-y-3">
+                <h3 className="text-lg md:text-xl font-bold text-black mt-4 md:mt-6">Single Domain</h3>
+                <div className="h-px bg-black/20 my-3 md:my-4"></div>
+                <ul className="space-y-2 md:space-y-3">
                   {[
                     "Full ownership rights",
                     "Immediate transfer process", 
@@ -156,18 +156,18 @@ const Index = () => {
                     "Choose one: cyberrange.one, cyberrange.company, or cyberrange.training"
                   ].map((item, idx) => (
                     <li key={idx} className="flex items-start">
-                      <ArrowRight className="w-5 h-5 text-black mr-2 mt-0.5 flex-shrink-0" />
-                      <span className="text-black/70">{item}</span>
+                      <ArrowRight className="w-4 h-4 md:w-5 md:h-5 text-black mr-2 mt-0.5 flex-shrink-0" />
+                      <span className="text-sm md:text-base text-black/70">{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
-              <div className="p-8 pt-0 mt-auto">
-                <p className="text-black/70 text-sm mb-1">$ cat price.txt</p>
-                <div className="text-3xl font-bold text-black mb-6">€30,000</div>
+              <div className="p-5 md:p-8 pt-0 mt-auto">
+                <p className="text-black/70 text-xs md:text-sm mb-1">$ cat price.txt</p>
+                <div className="text-2xl md:text-3xl font-bold text-black mb-4 md:mb-6">€30,000</div>
                 <Button 
                   onClick={() => handleContactClick('single')}
-                  className="w-full bg-black hover:bg-black/80 text-white border border-black py-6 font-mono rounded-none">
+                  className="w-full bg-black hover:bg-black/80 text-white border border-black py-3 md:py-6 font-mono rounded-none text-sm md:text-base">
                   <Mail className="w-4 h-4 mr-2" />
                   ./purchase_single.sh
                 </Button>
@@ -176,16 +176,16 @@ const Index = () => {
 
             {/* Bundle Card */}
             <Card className="bg-white border-2 border-black hover:shadow-[5px_5px_0px_0px_rgba(0,0,0)] transition-all duration-300 relative flex flex-col">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-black text-white px-4 py-1 text-sm font-medium border border-black">
+              <div className="absolute -top-3 md:-top-4 left-1/2 transform -translate-x-1/2 bg-black text-white px-3 py-1 text-xs md:text-sm font-medium border border-black">
                 ROOT ACCESS
               </div>
-              <div className="p-8 flex-grow">
-                <div className="p-3 rounded-none bg-black/5 w-fit border-2 border-black">
-                  <Network className="w-6 h-6 text-black" />
+              <div className="p-5 md:p-8 flex-grow">
+                <div className="p-2 md:p-3 rounded-none bg-black/5 w-fit border-2 border-black">
+                  <Network className="w-5 h-5 md:w-6 md:h-6 text-black" />
                 </div>
-                <h3 className="text-xl font-bold text-black mt-6">Domain Bundle</h3>
-                <div className="h-px bg-black/20 my-4"></div>
-                <ul className="space-y-3">
+                <h3 className="text-lg md:text-xl font-bold text-black mt-4 md:mt-6">Domain Bundle</h3>
+                <div className="h-px bg-black/20 my-3 md:my-4"></div>
+                <ul className="space-y-2 md:space-y-3">
                   {[
                     "All three premium domains included",
                     "cyberrange.one + cyberrange.company + cyberrange.training",
@@ -193,18 +193,18 @@ const Index = () => {
                     "Ultimate cyber range branding portfolio"
                   ].map((item, idx) => (
                     <li key={idx} className="flex items-start">
-                      <ArrowRight className="w-5 h-5 text-black mr-2 mt-0.5 flex-shrink-0" />
-                      <span className="text-black/70">{item}</span>
+                      <ArrowRight className="w-4 h-4 md:w-5 md:h-5 text-black mr-2 mt-0.5 flex-shrink-0" />
+                      <span className="text-sm md:text-base text-black/70">{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
-              <div className="p-8 pt-0 mt-auto">
-                <p className="text-black/70 text-sm mb-1">$ sudo cat price.txt</p>
-                <div className="text-3xl font-bold text-black mb-6">€50,000</div>
+              <div className="p-5 md:p-8 pt-0 mt-auto">
+                <p className="text-black/70 text-xs md:text-sm mb-1">$ sudo cat price.txt</p>
+                <div className="text-2xl md:text-3xl font-bold text-black mb-4 md:mb-6">€50,000</div>
                 <Button 
                   onClick={() => handleContactClick('bundle')}
-                  className="w-full bg-black hover:bg-black/80 text-white border border-black py-6 font-mono rounded-none">
+                  className="w-full bg-black hover:bg-black/80 text-white border border-black py-3 md:py-6 font-mono rounded-none text-sm md:text-base">
                   <Mail className="w-4 h-4 mr-2" />
                   ./purchase_bundle.sh
                 </Button>
@@ -214,11 +214,11 @@ const Index = () => {
         </div>
 
         {/* Footer */}
-        <div className="text-center text-black/60 pt-12 border-t-2 border-black/20">
-          <p className="text-xs">© {new Date().getFullYear()} All rights reserved</p>
-          <Link to="/impressum" className="text-black hover:text-black/80 mt-2 inline-block text-xs underline">
+        <div className="text-center text-black/60 pt-8 md:pt-12 border-t-2 border-black/20">
+          <Link to="/impressum" className="text-black hover:text-black/80 inline-block text-xs underline">
             ./impressum.sh
           </Link>
+          <p className="text-xs mt-2">© {new Date().getFullYear()} All rights reserved</p>
         </div>
       </div>
     </div>
