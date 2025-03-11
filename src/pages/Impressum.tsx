@@ -33,8 +33,7 @@ const Impressum = () => {
                 <h2 className="text-xl font-bold mb-2 text-black border-b border-black pb-1"># Information according to § 5 TMG</h2>
                 <p className="text-black/70 pl-4">This domain is offered for sale by:</p>
                 <pre className="bg-black/5 p-4 mt-2 font-mono border-2 border-black text-black">
-{`Dr. Philip Empl
-Address available upon legitimate request`}
+{`Dr. Philip Empl`}
                 </pre>
               </section>
               
