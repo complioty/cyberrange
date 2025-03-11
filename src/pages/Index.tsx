@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Typewriter from 'typewriter-effect';
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Link } from 'react-router-dom';
 import { Shield, Globe, Zap, Mail } from 'lucide-react';
 
 const Index = () => {
@@ -92,6 +93,9 @@ const Index = () => {
         {/* Footer */}
         <div className="text-center text-gray-500 text-sm">
           <p>© {new Date().getFullYear()} All rights reserved</p>
+          <Link to="/impressum" className="text-gray-500 hover:text-gray-700 mt-2 inline-block">
+            Impressum
+          </Link>
         </div>
       </div>
     </div>
