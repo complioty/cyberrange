@@ -89,9 +89,9 @@ const Index = () => {
                   strings: [`$ ${displayDomain}`],
                   autoStart: true,
                   loop: true,
-                  delay: 120, // Slower typing speed
-                  deleteSpeed: 40, // Slower deletion speed
-                  pauseFor: 2000, // Pause after typing before deleting
+                  delay: 120,
+                  deleteSpeed: 40,
+                  waitBeforeDeleteMs: 2000
                 }}
               />
             </h1>
