@@ -38,7 +38,7 @@ const Index = () => {
     } else {
       subject += displayDomain;
     }
-    window.location.href = `mailto:Philip.empl@gmx.de?subject=${subject}`;
+    window.location.href = `mailto:philip.empl@gmx.de?subject=${subject}`;
   };
 
   const features = [
