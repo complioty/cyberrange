@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import Typewriter from 'typewriter-effect';
 import { Card } from "@/components/ui/card";
@@ -81,7 +82,7 @@ const Index = () => {
               <span className="text-black font-medium text-xs md:text-sm">// Premium Domain For Sale</span>
             </div>
             
-            <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-black tracking-tight leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-[#00FF41] tracking-tight leading-tight">
               <Typewriter
                 options={{
                   strings: [
@@ -97,7 +98,7 @@ const Index = () => {
                   pauseFor: 2000,
                   cursor: '█',
                   wrapperClassName: 'whitespace-pre',
-                  cursorClassName: 'text-black animate-pulse'
+                  cursorClassName: 'text-[#00FF41] animate-pulse'
                 }}
               />
             </h1>
