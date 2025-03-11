@@ -84,9 +84,10 @@ const Index = () => {
             </div>
             
             <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-black tracking-tight leading-tight break-words">
+              $
               <Typewriter
                 options={{
-                  strings: [`$ ${displayDomain}`],
+                  strings: [`${displayDomain}`],
                   autoStart: true,
                   loop: true,
                   delay: 120,
