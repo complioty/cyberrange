@@ -2,67 +2,83 @@
 import React from 'react';
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, Mail } from 'lucide-react';
+import { ChevronLeft, Mail, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Impressum = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 text-gray-800 relative overflow-hidden">
+    <div className="min-h-screen bg-white text-black font-mono">
       {/* Background grid effect */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#e5e5e580_1px,transparent_1px),linear-gradient(to_bottom,#e5e5e580_1px,transparent_1px)] bg-[size:14px_24px]" />
       
-      <div className="relative z-10 container mx-auto px-4 py-16">
-        <Link to="/" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-6">
+      <div className="container mx-auto px-4 py-16 relative z-10">
+        <Link to="/" className="inline-flex items-center text-black hover:text-black/80 mb-6 border border-black px-3 py-1 text-sm">
           <ChevronLeft className="w-4 h-4 mr-1" />
-          Back to Home
+          cd ..
         </Link>
         
-        <Card className="p-8 max-w-3xl mx-auto bg-white shadow-lg">
-          <h1 className="text-3xl font-bold mb-6 text-gray-800">Legal Notice (Impressum)</h1>
-          
-          <div className="space-y-6">
-            <section>
-              <h2 className="text-xl font-semibold mb-2 text-gray-800">Information according to § 5 TMG</h2>
-              <p>This domain is offered for sale by:</p>
-              <p className="mt-2">
-                Philip Empl<br />
-                Address available upon legitimate request
-              </p>
-            </section>
-            
-            <section>
-              <h2 className="text-xl font-semibold mb-2 text-gray-800">Contact</h2>
-              <Button 
-                onClick={() => window.location.href = 'mailto:Philip.empl@gmx.de?subject=Legal Inquiry'}
-                className="bg-blue-600 hover:bg-blue-700 text-white">
-                <Mail className="w-4 h-4 mr-2" />
-                Contact via Email
-              </Button>
-            </section>
-            
-            <section>
-              <h2 className="text-xl font-semibold mb-2 text-gray-800">Disclaimer</h2>
-              <h3 className="font-medium mb-1">Liability for Content</h3>
-              <p className="text-gray-600 mb-3">
-                As a service provider, we are responsible for our own content on these pages according to general laws.
-                However, we are not obligated to monitor transmitted or stored third-party information or to investigate
-                circumstances that indicate illegal activity.
-              </p>
-              
-              <h3 className="font-medium mb-1">Liability for Links</h3>
-              <p className="text-gray-600">
-                Our offer contains links to external websites of third parties, on whose contents we have no influence.
-                Therefore, we cannot assume any liability for these external contents. The respective provider or
-                operator of the pages is always responsible for the content of the linked pages.
-              </p>
-            </section>
+        {/* Terminal Window */}
+        <div className="max-w-3xl mx-auto bg-white border-2 border-black rounded-md shadow-[5px_5px_0px_0px_rgba(0,0,0)] overflow-hidden">
+          <div className="flex items-center bg-black px-4 py-2">
+            <div className="flex space-x-2 mr-4">
+              <div className="w-3 h-3 rounded-full bg-red-500"></div>
+              <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+              <div className="w-3 h-3 rounded-full bg-green-500"></div>
+            </div>
+            <p className="text-xs text-white">root@cyberrange:~# cat impressum.txt</p>
           </div>
-        </Card>
-      </div>
-      
-      {/* Footer */}
-      <div className="text-center text-gray-500 text-sm py-6">
-        <p>© {new Date().getFullYear()} All rights reserved</p>
+          
+          <div className="p-8">
+            <h1 className="text-3xl font-bold mb-6 text-black font-mono">Legal Notice (Impressum)</h1>
+            
+            <div className="space-y-6">
+              <section>
+                <h2 className="text-xl font-bold mb-2 text-black border-b border-black pb-1"># Information according to § 5 TMG</h2>
+                <p className="text-black/70 pl-4">This domain is offered for sale by:</p>
+                <pre className="bg-black/5 p-4 mt-2 font-mono border-2 border-black text-black">
+{`Philip Empl
+Address available upon legitimate request`}
+                </pre>
+              </section>
+              
+              <section>
+                <h2 className="text-xl font-bold mb-2 text-black border-b border-black pb-1"># Contact</h2>
+                <Button 
+                  onClick={() => window.location.href = 'mailto:Philip.empl@gmx.de?subject=Legal Inquiry'}
+                  className="bg-black hover:bg-black/80 text-white mt-2 border border-black py-3 font-mono rounded-none">
+                  <Mail className="w-4 h-4 mr-2" />
+                  ./contact.sh
+                </Button>
+              </section>
+              
+              <section>
+                <h2 className="text-xl font-bold mb-2 text-black border-b border-black pb-1"># Disclaimer</h2>
+                <div className="pl-4">
+                  <h3 className="font-bold mb-1 text-black">## Liability for Content</h3>
+                  <p className="text-black/70 mb-3">
+                    As a service provider, we are responsible for our own content on these pages according to general laws.
+                    However, we are not obligated to monitor transmitted or stored third-party information or to investigate
+                    circumstances that indicate illegal activity.
+                  </p>
+                  
+                  <h3 className="font-bold mb-1 text-black">## Liability for Links</h3>
+                  <p className="text-black/70">
+                    Our offer contains links to external websites of third parties, on whose contents we have no influence.
+                    Therefore, we cannot assume any liability for these external contents. The respective provider or
+                    operator of the pages is always responsible for the content of the linked pages.
+                  </p>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+        
+        {/* Terminal Footer */}
+        <div className="text-center text-black/60 mt-8">
+          <p className="text-xs">
+            <span className="text-black/70">root@cyberrange:~#</span> echo "© {new Date().getFullYear()} All rights reserved"
+          </p>
+        </div>
       </div>
     </div>
   );
