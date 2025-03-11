@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import Typewriter from 'typewriter-effect';
 import { Card } from "@/components/ui/card";
