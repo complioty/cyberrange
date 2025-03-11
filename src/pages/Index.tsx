@@ -78,18 +78,27 @@ const Index = () => {
           </div>
           
           <div className="p-4 md:p-6 text-center space-y-6 md:space-y-8">
-            <div className="inline-flex items-center justify-center bg-gradient-to-r from-emerald-500 to-teal-400 px-4 py-2 rounded-full border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0)] transform hover:translate-y-[-2px] transition-all duration-200">
-              <span className="text-white font-bold text-xs md:text-sm tracking-wide uppercase">// Premium Domain For Sale</span>
+            <div className="inline-flex items-center space-x-2 bg-black/5 px-3 py-1 md:px-4 md:py-2 rounded-full border border-black/30">
+              <span className="text-black font-medium text-xs md:text-sm">// Premium Domain For Sale</span>
             </div>
             
-            <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-black tracking-tight leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-[#00FF41] tracking-tight leading-tight">
               <Typewriter
                 options={{
-                  strings: [`$ ${displayDomain}`],
+                  strings: [
+                    `echo "${displayDomain}"`,
+                    `whois "${displayDomain}"`,
+                    `dig "${displayDomain}"`,
+                    `host "${displayDomain}"`
+                  ],
                   autoStart: true,
                   loop: true,
-                  delay: 80,
-                  deleteSpeed: 80
+                  delay: 120,
+                  deleteSpeed: 50,
+                  pauseFor: 2000,
+                  cursor: '█',
+                  wrapperClassName: 'whitespace-pre',
+                  cursorClassName: 'text-[#00FF41] animate-pulse'
                 }}
               />
             </h1>
