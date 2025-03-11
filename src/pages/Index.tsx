@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import Typewriter from 'typewriter-effect';
 import { Card } from "@/components/ui/card";
@@ -89,8 +88,10 @@ const Index = () => {
                 options={{
                   strings: [`$ ${displayDomain}`],
                   autoStart: true,
-                  loop: false,
-                  delay: 80
+                  loop: true,
+                  delay: 120, // Slower typing speed
+                  deleteSpeed: 40, // Slower deletion speed
+                  pauseFor: 2000, // Pause after typing before deleting
                 }}
               />
             </h1>
