@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import Typewriter from 'typewriter-effect';
 import { Card } from "@/components/ui/card";
@@ -78,8 +77,18 @@ const Index = () => {
           </div>
           
           <div className="p-4 md:p-6 text-center space-y-6 md:space-y-8">
-            <div className="inline-flex items-center justify-center bg-gradient-to-r from-emerald-500 to-teal-400 px-4 py-2 rounded-full border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0)] transform hover:translate-y-[-2px] transition-all duration-200">
-              <span className="text-white font-bold text-xs md:text-sm tracking-wide uppercase">// Premium Domain For Sale</span>
+            <div className="inline-block bg-black px-4 py-2 rounded-md shadow-md border border-purple-300 relative animate-pulse">
+              <div className="absolute inset-0 bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-500 opacity-20 rounded-md"></div>
+              <span className="font-mono font-bold text-xs md:text-sm">
+                <span className="text-green-400">/*</span> 
+                <span className="text-yellow-300 mx-1">★★★</span> 
+                <span className="text-pink-400">PREMIUM</span> 
+                <span className="text-cyan-300">DOMAIN</span> 
+                <span className="text-orange-400">FOR</span> 
+                <span className="text-green-300">SALE</span> 
+                <span className="text-yellow-300 mx-1">★★★</span> 
+                <span className="text-green-400">*/</span>
+              </span>
             </div>
             
             <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-black tracking-tight leading-tight">
